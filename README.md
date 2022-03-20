@@ -37,5 +37,5 @@
 * Препроцессор scss
 * Webpack
 * Библиотека Lodash
-### Просмотр итогового вида SPA доступен по ссылке: https://raspy-ladybug.surge.sh/
+### Просмотр итогового вида SPA доступен по ссылке: https://successful-yard.surge.sh/
 

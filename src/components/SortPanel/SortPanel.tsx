@@ -24,7 +24,7 @@ let sortCompany=()=>{
 return (
     <div className="SortPanel">
       <div className="SortPanel__sorting-header">Сортировка</div>
-      <button className="SortPanel__sorting-city-button" onClick={()=>sortCity()}>по городу</button>
+      <button className="SortPanel__sorting-city-button" onClick={()=>sortCity()}><span>по городу</span></button>
       <button className="SortPanel__sorting-company-button" onClick={()=>sortCompany()}>по компании</button>
     </div>
 )

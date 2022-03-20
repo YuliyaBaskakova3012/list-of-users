@@ -11,15 +11,15 @@ $color3: #4B51EF;
     border-radius: 5px;
 }
 @mixin mixin2 {
-    
     padding-left: 15.2px;
+    padding-right: 15.2px;
     height: 24.12px;
     cursor: pointer;
     color: $color2;
     background: $color3;     
     border-width: 0px;
     display: block;
-    text-align: left; 
+    text-align: center; 
     @include mixin1();
 }
 .SortPanel{
