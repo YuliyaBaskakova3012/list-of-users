@@ -7,7 +7,7 @@
  - name
  - address.city
  - company.name
-4. Кнопка "Подробнее" ведет на "Профиль пользователя"
+4. Кнопка "Подробнее" ведет на "Профиль пользователя"oplllllcx
 5. Реализована фильтрация списка по городу и названию компании в алфавитном порядке
 <img src='./src/assets/list-of-users.png' alt='list-of-users'>
 
@@ -37,5 +37,5 @@
 * Препроцессор scss
 * Webpack
 * Библиотека Lodash
-### Просмотр итогового вида SPA доступен по ссылке: https://educated-collar.surge.sh/
+### Просмотр итогового вида SPA доступен по ссылке: https://wealthy-lettuce.surge.sh/
 
