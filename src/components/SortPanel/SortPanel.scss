@@ -1,0 +1,45 @@
+$color1: #BDBDBD;
+$color2: #FFFFFF;
+$color3: #4B51EF;
+@mixin mixin1 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 10.05px;
+    border-radius: 5px;
+}
+@mixin mixin2 {
+    padding-left: 15.2px;
+    padding-right: 15.2px;
+    height: 24.12px;
+    cursor: pointer;
+    color: $color2;
+    background: $color3;     
+    border-width: 0px;
+    @include mixin1();
+}
+.SortPanel{
+    grid-area: a;
+    background: $color1;
+    padding-left: 20.27px;
+    padding-top: 35.17px;
+}
+.SortPanel__sorting-header{                              
+  @include mixin1();
+    margin-top: 0px;
+}
+.SortPanel__sorting-city-button{
+    @include mixin2();                          
+    width: 86.13px; 
+}
+.SortPanel__sorting-city-button:hover, .SortPanel__sorting-company-button:hover{
+    border: 2px solid black;
+}
+.SortPanel__sorting-company-button{
+    @include mixin2();                            
+    width: 105.39px;  
+}
+
+
