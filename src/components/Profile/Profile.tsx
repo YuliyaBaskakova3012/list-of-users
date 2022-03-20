@@ -32,7 +32,7 @@ street, city, zipcode
       website,
       comment
    }
-   let json=JSON.stringify(obj)
+   let json=JSON.stringify(obj);
    console.log(json);
    navigate(-1);
 }
