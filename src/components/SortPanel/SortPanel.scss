@@ -11,13 +11,15 @@ $color3: #4B51EF;
     border-radius: 5px;
 }
 @mixin mixin2 {
+    
     padding-left: 15.2px;
-    padding-right: 15.2px;
     height: 24.12px;
     cursor: pointer;
     color: $color2;
     background: $color3;     
     border-width: 0px;
+    display: block;
+    text-align: left; 
     @include mixin1();
 }
 .SortPanel{
@@ -34,12 +36,12 @@ $color3: #4B51EF;
     @include mixin2();                          
     width: 86.13px; 
 }
-.SortPanel__sorting-city-button:hover, .SortPanel__sorting-company-button:hover{
-    border: 2px solid black;
-}
 .SortPanel__sorting-company-button{
     @include mixin2();                            
-    width: 105.39px;  
+    width: 105.39px;     
+}
+.SortPanel__sorting-city-button:hover, .SortPanel__sorting-company-button:hover{
+    box-shadow: 0 0 5px $color3;
 }
 
 

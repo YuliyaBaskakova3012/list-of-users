@@ -8,9 +8,7 @@ module.exports = {
     path: path.join(__dirname, "/build"),
     filename: "index-bundle.js"
   },
-  devServer: {
-    contentBase: "./build",
-  },
+  
   module: {
     rules: [
       {

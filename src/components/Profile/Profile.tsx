@@ -21,7 +21,7 @@ let formSubmit=(event: { preventDefault: () => void; target: any; })=>{
    const phone=form.elements["phone"].value;
    const website=form.elements["website"].value;
    const comment=form.elements["comment"].value;
-   let arr=[{
+   let obj={
       name, 
       username, 
       email,
@@ -31,8 +31,8 @@ street, city, zipcode
       phone,
       website,
       comment
-   }]
-   let json=JSON.stringify(arr)
+   }
+   let json=JSON.stringify(obj)
    console.log(json);
    navigate(-1);
 }
@@ -90,7 +90,7 @@ let changeComment=(event: { target: { value: any; }; })=>{
 return (
    <div className='Profile'>
        <div className="Profile__user-header">Профиль пользователя</div>  
-       <button className="Profile__edit-button" onClick={()=>edit()}><div>Редактировать</div></button>
+       <button className="Profile__edit-button" onClick={()=>edit()}>Редактировать</button>
        <form className="Profile__form" onSubmit={ formSubmit}>
           <div>Name</div>
           <input id="name" value={nameValue} readOnly={isReadOnly} onChange={changeName} required/>

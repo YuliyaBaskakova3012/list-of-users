@@ -63,7 +63,8 @@ $color5: #FFFFFF;
 .Users__user{
   width: 420px;
   height: 73px;
-  margin-left: 31px;
+  margin-left: 36px;
+  margin-right: 41px;
   background: $color2;
   border-radius: 8px;
   padding-left: 10px;
@@ -120,12 +121,11 @@ $color5: #FFFFFF;
   }      
 }
 .Users__number-of-users{
-  width: 155px;
-  height: 14px;
-  margin-left: 299px;
+  display: block;
+  text-align: right;
+  margin-right: 59px;
   margin-top: 10px;
   @include mixin2();
-  text-align: end;
 }
 
   

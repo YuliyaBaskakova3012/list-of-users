@@ -32,20 +32,19 @@ $color9: rgba(0, 0, 0, 0.3);
   color: $color1;
 }
 .Profile__edit-button{
-  margin-left: 161px;
+  box-sizing: border-box;
+  margin-left: 353px;
   margin-top: 13px;
   width: 116.67px;
   height: 27.12px;
   background: $color2;
   border-radius: 5px;
-  border-width: 0px;
+  border-width: 0px; 
+  display: block;
+  text-align: center;
+  @include mixin1();
+  color: $color3; 
   cursor: pointer;
-    div{
-      width: 94px;
-      height: 16px;
-      @include mixin1();
-      color: $color3;  
-       }
     }
 .Profile__form{
    width: 438px;
@@ -110,5 +109,8 @@ input:required:invalid {
   border-width: 0px;  
     }                
 .Profile__edit-button:hover, .Profile__form-submit-button:hover{
-  border: 2px solid black;
+  box-shadow: 0 0 5px $color2;
+}
+.Profile__form-submit-button:hover{
+  box-shadow: 0 0 5px $color5;
 }
