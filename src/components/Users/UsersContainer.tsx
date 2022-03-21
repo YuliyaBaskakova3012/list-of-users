@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import Users from './Users';
 import {changeDataThunk} from '../../../redux/users-reducer';
 import Loader from '../Loader';
-const url1='https://jsonplaceholder.typicode.com/users';
+const url='http://jsonplaceholder.typicode.com/users';
 const UsersContainer=(props: { isStartedLoading: boolean; changeDataThunk: (arg0: string) => void; isLoading: boolean; })=>{
 if(!props.isStartedLoading){
-  props.changeDataThunk(url1);
+  props.changeDataThunk(url);
 }
  return (
  <>

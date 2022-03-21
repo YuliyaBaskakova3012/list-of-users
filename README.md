@@ -1,7 +1,7 @@
 # Список пользователей
 ### Сверстаны две страницы: "Список пользователей" и "Профиль пользователя"
 ## Список пользователей:
-1. Выводятся 10 пользователей. Данные взяты  с [https://jsonplaceholder.typicode.com/users](https://jsonplaceholder.typicode.com/users)
+1. Выводятся 10 пользователей. Данные взяты  с [https://jsonplaceholder.typicode.com/users](http://jsonplaceholder.typicode.com/users)
 2. Пока идет загрузка списка пользователей, отображается индикатор загрузки
 3. Выводятся на карточку:
  - name
@@ -21,7 +21,7 @@
 - address.zipcode
 - phone
 - website
-2. Все поля формы, кроме Comment, предзаполнены из [https://jsonplaceholder.typicode.com/users](https://jsonplaceholder.typicode.com/users)
+2. Все поля формы, кроме Comment, предзаполнены из [https://jsonplaceholder.typicode.com/users](http://jsonplaceholder.typicode.com/users)
 3. Реализована кнопка "Редактировать", изначально поля readonly, после нажатия на кнопку поля можно редактировать
 4. Реализована валидация на клиенте
 5. Все поля формы, кроме поля Comment, обязательны для заполнения
@@ -37,5 +37,4 @@
 * Препроцессор scss
 * Webpack
 * Библиотека Lodash
-### Просмотр итогового вида SPA доступен по ссылке: https://successful-yard.surge.sh/
-
+### Просмотр итогового вида SPA доступен по ссылке: [http://evasive-jail.surge.sh/](http://evasive-jail.surge.sh/)
