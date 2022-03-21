@@ -37,4 +37,4 @@
 * Препроцессор scss
 * Webpack
 * Библиотека Lodash
-### Просмотр итогового вида SPA доступен по ссылке: [http://evasive-jail.surge.sh/](http://evasive-jail.surge.sh/)
+### Просмотр итогового вида SPA доступен по ссылке: [http://bitter-fear.surge.sh/](http://bitter-fear.surge.sh/)

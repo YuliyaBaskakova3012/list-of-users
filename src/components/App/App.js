@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import ProfileContainer from "./Profile/ProfileContainer";
-import SortPanelContainer from "./SortPanel/SortPanelContainer";
-import UsersContainer from "./Users/UsersContainer";
+import ProfileContainer from "../Profile/ProfileContainer";
+import SortPanelContainer from "../SortPanel/SortPanelContainer";
+import UsersContainer from "../Users/UsersContainer";
 class App extends Component {
     render() {
         return (
@@ -19,5 +19,4 @@ class App extends Component {
                );
              }
            }
-
 export default App;

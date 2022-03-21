@@ -2,7 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import Users from './Users';
 import {changeDataThunk} from '../../../redux/users-reducer';
-import Loader from '../Loader';
+import Loader from '../../components/Loader/Loader';
 const url='http://jsonplaceholder.typicode.com/users';
 const UsersContainer=(props: { isStartedLoading: boolean; changeDataThunk: (arg0: string) => void; isLoading: boolean; })=>{
 if(!props.isStartedLoading){
