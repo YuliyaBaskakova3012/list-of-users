@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './Loader.scss';
+import './Preloader.scss';
 export default()=><div className="Loader"><div></div><div></div></div>
 
 

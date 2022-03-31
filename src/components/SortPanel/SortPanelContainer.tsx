@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import {changeData} from '../../../redux/users-reducer';
+import {changeData} from '../../redux/users-reducer';
 import SortPanel from './SortPanel';
 const SortPanelContainer=(props: {changeDataThunk: (arg0: any[]) => void; isLoading: boolean; })=><>
   <SortPanel data={[]} changeData={function (arg0: any): void {

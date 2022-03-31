@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import {changeData} from '../../../redux/users-reducer';
+import {changeData} from '../../redux/users-reducer';
 import Profile from './Profile';
 const ProfileContainer=(props: {isLoading: boolean; data: any[] })=><>
 <Profile {...props}/>

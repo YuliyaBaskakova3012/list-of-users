@@ -1,20 +1,21 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import Users from './Users';
-import {changeDataThunk} from '../../../redux/users-reducer';
-import Loader from '../../components/Loader/Loader';
+import {changeDataThunk} from '../../redux/users-reducer';
+import Loader from '../common/Preloader/Preloader';
 const url='http://jsonplaceholder.typicode.com/users';
 const UsersContainer=(props: { isStartedLoading: boolean; changeDataThunk: (arg0: string) => void; isLoading: boolean; })=>{
 if(!props.isStartedLoading){
   props.changeDataThunk(url);
 }
  return (
- <>
- {props.isLoading?
- <Loader/>
- :
- <Users data={[]} {...props}/>}
- </>
+<>
+{props.isLoading?
+<Loader/>
+:
+<Users data={[]} {...props}/>
+}
+</>
        )
 }
 const mapStateToProps=(state: { users: { data: any[]; isLoading: boolean; isStartedLoading: boolean; }; })=>({

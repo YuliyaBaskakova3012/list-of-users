@@ -34,7 +34,7 @@
 * React-Redux
 * Redux-Thunk
 * TypeScript
-* Препроцессор scss
+* Препроцессор SCSS
 * Webpack
 * Библиотека Lodash
 ### Просмотр итогового вида SPA доступен по ссылке: [http://bitter-fear.surge.sh/](http://bitter-fear.surge.sh/)
