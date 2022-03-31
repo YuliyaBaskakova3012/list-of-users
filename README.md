@@ -33,6 +33,7 @@
 * Redux
 * React-Redux
 * Redux-Thunk
+* 
 * TypeScript
 * Препроцессор SCSS
 * Webpack
