@@ -37,4 +37,4 @@
 * Препроцессор SCSS
 * Webpack
 * Библиотека Lodash
-### Просмотр итогового вида SPA доступен по ссылке: [http://bitter-fear.surge.sh/](http://bitter-fear.surge.sh/)
+### Просмотр итогового вида SPA доступен по ссылке: [http://awful-action.surge.sh/](http://awful-action.surge.sh/)
