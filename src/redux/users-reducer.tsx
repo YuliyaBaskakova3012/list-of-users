@@ -1,3 +1,5 @@
+import { UsersType } from "../types";
+
 const CHANGE_DATA='CHANGE_DATA';
 const LOAD_DATA='LOAD_DATA';
 const  START_LOAD_DATA=' START_LOAD_DATA';
@@ -29,11 +31,11 @@ switch (action.type) {
   default: return state
  }
 }
-export const changeData = (data: any) => ({type: CHANGE_DATA, data });
+export const changeData = (data: UsersType[]) => ({type: CHANGE_DATA, data });
 export const loadData = () => ({type: LOAD_DATA});
-export const loadData1 = () => ({type: START_LOAD_DATA});
-export const changeDataThunk=(url: RequestInfo)=>async(dispatch: (arg0: { type: string; data?: any; }) => void)=>{
-  dispatch(loadData1());
+export const startLoadData = () => ({type: START_LOAD_DATA});
+export const changeDataThunk=(url: string)=>async(dispatch: (arg: { type: string}) => void)=>{
+  dispatch(startLoadData());
   let res=await fetch(url);
   let data=await res.json();
   dispatch(changeData(data));

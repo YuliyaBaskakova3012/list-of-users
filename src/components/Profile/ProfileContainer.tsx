@@ -1,13 +1,18 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import {changeData} from '../../redux/users-reducer';
+import { UsersType } from '../../types';
 import Profile from './Profile';
-const ProfileContainer=(props: {isLoading: boolean; data: any[] })=><>
-<Profile {...props}/>
+
+type ProfileProps={
+    data: UsersType[],
+    isLoading: boolean
+}
+const ProfileContainer=(props:ProfileProps)=><>
+<Profile {...props as ProfileProps}/>
 </>
-const mapStateToProps=(state: { users: { data: any; isLoading: boolean; }; })=>({
+const mapStateToProps=(state: { users:ProfileProps})=>({
 data: state.users.data,
 isLoading: state.users.isLoading
 });
-export default connect(mapStateToProps, {changeData})(ProfileContainer)
+export default connect(mapStateToProps)(ProfileContainer)
   

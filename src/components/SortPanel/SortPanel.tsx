@@ -2,20 +2,26 @@ import * as React from 'react';
 import "./SortPanel.scss";
 import { useNavigate } from "react-router-dom";
 import * as _ from 'lodash';
-const SortPanel=(props: { data: string | any[]; changeData: (arg0: any) => void; })=>{
+import { UsersType } from '../../types';
+
+type SortPanelType={
+  data: UsersType[],
+  changeData: (arg: UsersType[])=>void
+}
+const SortPanel=(props:SortPanelType)=>{
 const navigate=useNavigate();
-let url=window.location.href;
-let urlPart=url.split("/")[3];
-let dataCopy=props.data.concat();
-let sortCompanyNameData=_.orderBy(dataCopy, [(user: { company: { name: string; }; }) => user.company.name.toLowerCase()], ['asc']);
-let sortCityData=_.orderBy(dataCopy, [(user: { address: { city: string; }; }) => user.address.city.toLowerCase()], ['asc']); 
-let sortCity=()=>{
+const url=window.location.href;
+const urlPart=url.split("/")[3];
+const dataCopy=props.data.concat();
+const sortCompanyNameData=_.orderBy(dataCopy, [user=> user.company.name.toLowerCase()], ['asc']);
+const sortCityData=_.orderBy(dataCopy, [user => user.address.city.toLowerCase()], ['asc']); 
+const sortCity=()=>{
     props.changeData(sortCityData);
     if(urlPart==="profile")  {
         navigate(-1);
       }
     }
-let sortCompany=()=>{
+const sortCompany=()=>{
     props.changeData(sortCompanyNameData);
     if(urlPart==="profile"){
         navigate(-1);

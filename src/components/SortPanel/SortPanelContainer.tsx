@@ -1,13 +1,16 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+import { UsersType } from '../../types';
 import {changeData} from '../../redux/users-reducer';
 import SortPanel from './SortPanel';
-const SortPanelContainer=(props: {changeDataThunk: (arg0: any[]) => void; isLoading: boolean; })=><>
-  <SortPanel data={[]} changeData={function (arg0: any): void {
-  } } {...props}/>
+type SortPanelType={
+  data: UsersType[],
+  changeData: (arg: UsersType[])=>void
+}
+const SortPanelContainer=(props:SortPanelType)=><>
+  <SortPanel {...props as SortPanelType}/>
 </>
-const mapStateToProps=(state: { users: { data: any[]; isLoading: boolean; }; })=>({
-  data: state.users.data,
-  isLoading: state.users.isLoading
+const mapStateToProps=(state: {users:{data: UsersType[]}})=>({
+  data: state.users.data
 });
 export default connect(mapStateToProps, {changeData})(SortPanelContainer)

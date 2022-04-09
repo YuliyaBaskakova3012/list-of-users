@@ -1,11 +1,15 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 import "./Users.scss";
-const Users=(props: { data: any[]; })=>{
+import { UsersType } from '../../types';
+type UsersTypeProps={
+  data: UsersType[]
+}
+const Users=(props: UsersTypeProps)=>{
 return (
     <div className="Users">   
       <div className="Users__list-header">Список пользователей</div>  
-{props.data.map((item: { id: number; name: string; address: { city: string; }; company: { name: string; }; }) =>(
+{props.data.map((item) =>(
       <div className="Users__user"  key={item.id}>
         <div><div >ФИО:</div><div>{item.name}</div></div>
         <div><div>город:</div><div>{item.address.city}</div></div>
