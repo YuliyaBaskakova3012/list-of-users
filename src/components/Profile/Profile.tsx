@@ -1,13 +1,15 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import { UsersType } from '../../types';
+
 import "./Profile.scss";
-const Profile=(props: {data: UsersType[]})=>{
-let url=window.location.href;
-let urlPart=url.split("/")[4];
+const Profile=()=>{
+let url=window.location.hash;
+let urlPart=url.split("/")[2];
 let urlPartNumber=Number(urlPart);
-let users=props.data.filter(i=>i.id===urlPartNumber);
+let data=sessionStorage.getItem("users");
+let datatoJson=JSON.parse(data);
+let users=datatoJson.filter(i=>i.id===urlPartNumber);
 let user=users[0];
 const navigate=useNavigate();
 let formSubmit=(event: { preventDefault: () => void; target: any; })=>{

@@ -1,23 +1,20 @@
 import * as React from "react";
 import "./App.scss";
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import ProfileContainer from "./components/Profile/ProfileContainer";
+import { HashRouter as Router, Route, Routes} from "react-router-dom";
 import SortPanelContainer from "./components/SortPanel/SortPanelContainer";
 import UsersContainer from "./components/Users/UsersContainer";
-class App extends React.Component {
-    render() {
-        return (
+import Profile from "./components/Profile/Profile";
+const App =()=> (
             <div className="App">
                <Router>
                      <SortPanelContainer/>
                      <Routes>
+                        <Route path ="/profile/:id" element={<Profile/>}/>
                         <Route path="/" element={<UsersContainer/>}/>
-                        <Route path="/profile/:id" element={<ProfileContainer/>}/>
                         <Route path="*" element={<UsersContainer/>}/>
                      </Routes>
                 </Router>
             </div>           
-               );
-             }
-           }
+)   
+             
 export default App;

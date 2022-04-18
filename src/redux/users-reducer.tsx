@@ -38,6 +38,7 @@ export const changeDataThunk=(url: string)=>async(dispatch: (arg: { type: string
   dispatch(startLoadData());
   let res=await fetch(url);
   let data=await res.json();
+  sessionStorage.setItem("users", JSON.stringify(data));
   dispatch(changeData(data));
   dispatch(loadData());
 }

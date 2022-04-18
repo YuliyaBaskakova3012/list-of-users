@@ -37,4 +37,4 @@
 * Препроцессор SCSS
 * Webpack
 * Библиотека Lodash
-### Просмотр итогового вида SPA доступен по ссылке: [http://awful-action.surge.sh/](http://awful-action.surge.sh/)
+### Просмотр итогового вида SPA доступен по ссылке: [https://yuliyabaskakova3012.github.io/list-of-users/](https://yuliyabaskakova3012.github.io/list-of-users/)
