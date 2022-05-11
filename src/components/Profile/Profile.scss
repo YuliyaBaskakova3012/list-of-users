@@ -14,87 +14,90 @@ $color9: rgba(0, 0, 0, 0.3);
   font-size: 12px;
   line-height: 14px;
 }
+@mixin mixin2 {
+  padding-left: 5px;
+  padding-right: 5px; 
+}
 .Profile{
   width: 515px;
-  
+  min-width: 250px;
   grid-area: b;
   background: $color3;
-}
-.Profile__user-header{
-  float: left; 
-  width: 156px;
-  height: 16px;
-  margin-left: 36px;
-  margin-top: 19px;
-  margin-bottom: 16px;
-  @include mixin1();
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  color: $color1;
-}
-.Profile__edit-button{
-  box-sizing: border-box;
-  margin-left: 353px;
-  margin-top: 13px;
-  width: 116.67px;
-  height: 27.12px;
-  background: $color2;
-  border-radius: 5px;
-  border-width: 0px; 
-  display: block;
-  text-align: center;
-  @include mixin1();
-  color: $color3; 
-  cursor: pointer;
-    }
-.Profile__form{
-   width: 438px;
- 
-   height: 463px;
-   margin-left: 36px;
-   margin-right: 41px;
-   margin-top: 10.88px;
-   padding-top: 20px;
-   background: $color3;
-   border: 1px solid $color7;
-   box-sizing: border-box;
-   border-radius: 8px;
-     input{
-         width: 211px;
-         height: 22px;
-         margin-left: 12px;
-         margin-top: 3px;
-         margin-bottom: 10px;
-         background: $color3;
-         border: 1px solid $color8;
-         box-sizing: border-box;
-         border-radius: 5px;
-         padding-left: 10px;
-         @include mixin1();
-         font-size: 10px;
-         line-height: 12px;
-         color: $color1;
-         }
-     input:read-only{
-         color: $color9;
-                  }
-     div{
-         margin-left: 12px;
-         @include mixin1();
-         font-size: 8px;
-         line-height: 9px;
-         color: $color1;   
-       }
-    :nth-last-child(2){
-         width: 420px; 
-         height: 55px;
-         margin-bottom: 19px;
-      }
-      :disabled{
-        background: $color5;
+    .Profile__user-header{
+      float: left; 
+      width: 156px;
+      height: 16px;
+      margin-left: 36px;
+      margin-top: 19px;
+      margin-bottom: 16px;
+      @include mixin1();
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: $color1;
+     }
+    .Profile__edit-button{
+      box-sizing: border-box;
+      margin-left: 353px;
+      margin-top: 13px;
+      width: 116.67px;
+      height: 27.12px;
+      background: $color2;
+      border-radius: 5px;
+      border-width: 0px; 
+      display: block;
+      text-align: center;
+      @include mixin1();
+      color: $color3; 
+      cursor: pointer;
+        }
+        .Profile__form{
+          width: 438px;
+          height: 463px;
+          margin-left: 36px;
+          margin-right: 41px;
+          margin-top: 10.88px;
+          padding-top: 20px;
+          background: $color3;
+          border: 1px solid $color7;
+          box-sizing: border-box;
+          border-radius: 8px;
+            input{
+                width: 211px;
+                height: 22px;
+                margin-left: 12px;
+                margin-top: 3px;
+                margin-bottom: 10px;
+                background: $color3;
+                border: 1px solid $color8;
+                box-sizing: border-box;
+                border-radius: 5px;
+                padding-left: 10px;
+                @include mixin1();
+                font-size: 10px;
+                line-height: 12px;
+                color: $color1;
+                }
+            input:read-only{
+                color: $color9;
+                         }
+            div{
+                margin-left: 12px;
+                @include mixin1();
+                font-size: 8px;
+                line-height: 9px;
+                color: $color1;   
               }
-             }       
+           :nth-last-child(2){
+                width: 420px; 
+                height: 55px;
+                margin-bottom: 19px;
+             }
+             :disabled{
+               background: $color5;
+                     }
+                    } 
+}  
 input:required:invalid {
   border: 1px solid $color6;
 }   
@@ -118,17 +121,46 @@ input:required:invalid {
   box-shadow: 0 0 5px $color5;
 }
 @media(max-width: 665px){
-.Profile{
-  width: 100%;
-  
-  .Profile__form{
-    width: 100%;
-    margin: 0px;
-    input{
+    .Profile{
+      box-sizing: border-box;
       width: 100%;
-      padding: 0px;
-      margin: 0px;
-    }
-  }
-}
-}
+      @include mixin2();
+        .Profile__edit-button{
+            width: 100%;
+            margin-left: 0px;
+            margin-bottom: 10px;
+            @include mixin2();
+        }
+        .Profile__user-header{
+            float: none;
+            margin-left: 0;
+            width: 100%;
+            text-align: center;
+        }
+        .Profile__form{
+            width: 100%;
+            margin: 0px;
+            @include mixin2();
+            height: 100%;
+                > div {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                  }
+                > :last-child{
+                    margin-left: 0;
+                        .Profile__form-submit-button{
+                            @include mixin2();
+                            width: 100%;
+                            margin-left: 0px;
+                  }
+                }
+                input{
+                    width: 100%;
+                    height: 100px;
+                    padding: 0px;
+                    margin: 0px;
+                }
+              }
+            }
+          }

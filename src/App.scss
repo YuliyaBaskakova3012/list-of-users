@@ -1,26 +1,16 @@
 .App{
    display: grid;
    box-sizing: border-box;
-   width: 665px;
-   max-width: 665px;
-   min-width: 250px;
    height: 1028px;
-   max-height: 1028px;
-   
    grid-template-areas: 'a b';
 }
-@media(max-width: 665px){
+@media (max-width: 665px){
    .App{
-      width: 100%;
-      
       grid-template-areas: 'a a'
       'b b';
-   
-      
-     
-     
    }
 }
+
 
 
 
