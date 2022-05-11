@@ -27,21 +27,37 @@ $color3: #4B51EF;
     background: $color1;
     padding-left: 20.27px;
     padding-top: 35.17px;
+    
+        .SortPanel__sorting-header{                              
+           @include mixin1();
+           margin-top: 0px;
+        }
+        .SortPanel__sorting-city-button{
+            @include mixin2();                          
+            width: 86.13px; 
+        }
+        .SortPanel__sorting-company-button{
+            @include mixin2();                            
+            width: 105.39px;    
+        }
 }
-.SortPanel__sorting-header{                              
-  @include mixin1();
-    margin-top: 0px;
-}
-.SortPanel__sorting-city-button{
-    @include mixin2();                          
-    width: 86.13px; 
-}
-.SortPanel__sorting-company-button{
-    @include mixin2();                            
-    width: 105.39px;     
-}
+
 .SortPanel__sorting-city-button:hover, .SortPanel__sorting-company-button:hover{
     box-shadow: 0 0 5px $color3;
 }
+@media(max-width: 665px){
+    .SortPanel{
+        box-sizing: border-box;
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+        .SortPanel__sorting-city-button{
+            width: 100%;
+        }
+        .SortPanel__sorting-company-button{
+            width: 100%;
+        }
+    }
+    }
 
 

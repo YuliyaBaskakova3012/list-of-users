@@ -16,6 +16,8 @@ $color9: rgba(0, 0, 0, 0.3);
 }
 .Profile{
   width: 515px;
+  
+  grid-area: b;
   background: $color3;
 }
 .Profile__user-header{
@@ -48,6 +50,7 @@ $color9: rgba(0, 0, 0, 0.3);
     }
 .Profile__form{
    width: 438px;
+ 
    height: 463px;
    margin-left: 36px;
    margin-right: 41px;
@@ -113,4 +116,19 @@ input:required:invalid {
 }
 .Profile__form-submit-button:hover{
   box-shadow: 0 0 5px $color5;
+}
+@media(max-width: 665px){
+.Profile{
+  width: 100%;
+  
+  .Profile__form{
+    width: 100%;
+    margin: 0px;
+    input{
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+  }
+}
 }
