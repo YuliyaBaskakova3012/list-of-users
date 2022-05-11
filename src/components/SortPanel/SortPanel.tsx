@@ -11,7 +11,8 @@ type SortPanelType={
 const SortPanel=(props:SortPanelType)=>{
 const navigate=useNavigate();
 const url=window.location.href;
-const urlPart=url.split("/")[4];
+const urlPartSplit=url.split("/");
+const urlPart=urlPartSplit[urlPartSplit.length-2];
 const dataCopy=props.data.concat();
 const sortCompanyNameData=_.orderBy(dataCopy, [user=> user.company.name.toLowerCase()], ['asc']);
 const sortCityData=_.orderBy(dataCopy, [user => user.address.city.toLowerCase()], ['asc']); 
