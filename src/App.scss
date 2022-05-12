@@ -3,11 +3,14 @@
    box-sizing: border-box;
    height: 1028px;
    grid-template-areas: 'a b';
+   grid-template-columns: 1fr 497px;
 }
 @media (max-width: 665px){
    .App{
+      width: 100%;
       grid-template-areas: 'a a'
-      'b b';
+                           'b b';
+      grid-template-columns: 1fr;
    }
 }
 

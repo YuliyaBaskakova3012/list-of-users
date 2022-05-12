@@ -4,9 +4,8 @@
     width: 80px;
     height: 80px;
     margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  
+    margin-right: auto;
+    margin-top: 150px;
   }
   .Loader div {
     position: absolute;
@@ -32,5 +31,17 @@
       width: 72px;
       height: 72px;
       opacity: 0;
+    }
+  }
+  @media(max-width: 650px){
+    .Loader {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 100%;
+      margin: 0 auto;
+      margin-top: 150px;
     }
   }
