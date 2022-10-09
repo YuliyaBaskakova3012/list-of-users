@@ -12,7 +12,7 @@ interface UsersTypes{
 interface UsersTypeProps extends UsersTypes {
   changeDataThunk: (arg: string)=>void
 }
-const url='https://jsonplaceholder.typicode.com/users';
+const {url}=require('../../users.json');
 const UsersContainer=(props:UsersTypeProps)=>{
 if(!props.isStartedLoading){
   props.changeDataThunk(url);
